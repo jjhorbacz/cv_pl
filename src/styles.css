@@ -1,0 +1,216 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins");
+@import url("https://fonts.cdnfonts.com/css/clear-sans");
+body {
+  margin: 0;
+  padding: 0;
+}
+
+a,
+a:hover,
+a:visited {
+  text-decoration: none;
+}
+
+.cv {
+  height: 297mm;
+  width: 210mm;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  position: relative;
+}
+.cv .nameWrapper {
+  position: absolute;
+  font-family: "Poppins", sans-serif;
+  color: #FFF;
+  background-color: #B7C4CF;
+  top: 2em;
+  right: 0;
+}
+.cv .nameWrapper h1 {
+  font-size: 4em;
+  margin: 0;
+  padding: 50px 50px;
+  color: #2A2E36;
+}
+.cv .leftSiteWrapper {
+  width: 77.7mm;
+  height: 297mm;
+  background-color: #2A2E36;
+  font-family: "Poppins", sans-serif;
+  display: block;
+  color: #FFF;
+}
+.cv .leftSiteWrapper h2 {
+  text-transform: uppercase;
+  padding-left: 20px;
+  margin: 0;
+}
+.cv .leftSiteWrapper hr {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.cv .leftSiteWrapper p,
+.cv .leftSiteWrapper span {
+  padding-left: 20px;
+}
+.cv .leftSiteWrapper .contactInfo {
+  padding-top: 70mm;
+  margin-bottom: 2em;
+}
+.cv .leftSiteWrapper .contactInfo .contactBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 5px;
+  padding-left: 20px;
+  margin-bottom: 10px;
+}
+.cv .leftSiteWrapper .contactInfo .contactBox .contactImg {
+  height: 25px;
+  margin-right: 10px;
+  background-color: #B7C4CF;
+}
+.cv .leftSiteWrapper .contactInfo .contactBox .contactText {
+  color: #FFF;
+}
+.cv .leftSiteWrapper .educationInfo {
+  margin-bottom: 1em;
+}
+.cv .leftSiteWrapper .educationInfo p {
+  margin: 0;
+}
+.cv .leftSiteWrapper .educationInfo p:first-of-type {
+  margin-top: 1em;
+}
+.cv .rightSiteWrapper {
+  height: 297mm;
+  position: relative;
+  width: 132.3mm;
+}
+.cv .rightSiteWrapper .employmentHistory {
+  padding-top: 70mm;
+  background-color: #FFF;
+  font-family: "Poppins", sans-serif;
+  display: block;
+  color: #2A2E36;
+}
+.cv .rightSiteWrapper .employmentHistory h2 {
+  margin: 0;
+  padding-left: 20px;
+  padding-right: 35px;
+}
+.cv .rightSiteWrapper .employmentHistory hr {
+  color: #B7C4CF;
+  margin-left: 20px;
+  margin-right: 35px;
+}
+.cv .rightSiteWrapper .employmentHistory .worksSlicer {
+  color: #B7C4CF;
+  margin-left: 35px;
+}
+.cv .rightSiteWrapper .employmentHistory .workingTime {
+  margin: 0;
+  color: #737373;
+  font-weight: bold;
+  padding-left: 35px;
+  padding-right: 35px;
+}
+.cv .rightSiteWrapper .employmentHistory .workingPlace {
+  margin: 0;
+  padding-left: 35px;
+  padding-right: 35px;
+}
+.cv .rightSiteWrapper .employmentHistory .workingDuties {
+  font-size: 0.8em;
+  padding-left: 35px;
+  padding-right: 35px;
+}
+.cv .rightSiteWrapper .employmentHistory .vl {
+  border-left: 2px solid #2A2E36;
+  height: 158mm;
+  position: absolute;
+  top: 87mm;
+  right: 127mm;
+}
+.cv .rightSiteWrapper .employmentHistory .dot {
+  height: 15px;
+  width: 15px;
+  background-color: #2A2E36;
+  border-radius: 50%;
+  position: absolute;
+  right: 94.6%;
+  bottom: 17%;
+}
+.cv .rightSiteWrapper .employmentHistory #dot1 {
+  top: 28.8%;
+}
+.cv .rightSiteWrapper .employmentHistory #dot2 {
+  bottom: 44.1%;
+}
+.cv .rightSiteWrapper .rodo {
+  font-family: "clear-sans", sans-serif;
+  text-align: center;
+  font-size: 0.7em;
+  width: 132.3mm;
+  position: absolute;
+  bottom: 0;
+}
+.cv .rightSiteWrapper .rodo hr {
+  margin-left: 35px;
+  margin-right: 35px;
+  color: #B7C4CF;
+}
+.cv .rightSiteWrapper .rodo .rodoTextWprapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.cv .rightSiteWrapper .rodo .rodoTextWprapper p {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.cv .downloadButton {
+  position: absolute;
+  top: 15mm;
+  left: 45mm;
+  background-color: red;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.5em;
+  z-index: 999;
+  cursor: pointer;
+}
+.cv .downloadButton:hover {
+  background-color: green;
+}
+.cv .myPhoto {
+  position: absolute;
+  width: 30mm;
+  top: 13mm;
+  left: 13.5mm;
+}
+
+@media print {
+  body {
+    width: 210mm;
+    height: 297mm;
+    margin: 0;
+    padding: 0;
+  }
+  body .downloadButton {
+    display: none;
+  }
+}

@@ -1,1 +1,262 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+@import url('https://fonts.cdnfonts.com/css/clear-sans');
+
+$widthLikeA4: 210mm;
+$heightLikeA4: 297mm;
+$leftSiteWidth: $widthLikeA4*0.37;
+$mainFont: 'Poppins', sans-serif;
+$rodoFont: 'clear-sans', sans-serif;
+$mainFontColor: #FFF;
+$secondaryFontColor: #2A2E36;
+$mainBackground: #FFF;
+$secondaryBackground: #2A2E36;
+$nameBackground: #B7C4CF;
+$workingTimeFontColor: #737373;
+$fromNamePadding: 70mm;
+$leftSitePadding: 20px;
+$rightSitePadding: 35px;
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+a,
+a:hover,
+a:visited {
+    text-decoration: none;
+}
+
+.cv {
+    height: $heightLikeA4;
+    width: $widthLikeA4;
+    display: flex;
+    flex-wrap: nowrap;
+    position: relative;
+
+    .nameWrapper {
+        position: absolute;
+        font-family: $mainFont;
+        color: $mainFontColor;
+        background-color: $nameBackground;
+        top: 2em;
+        right: 0;
+
+        h1 {
+            font-size: 4em;
+            margin: 0;
+            padding: 50px 50px;
+            color: $secondaryBackground;
+        }
+    }
+
+    .leftSiteWrapper {
+        width: $leftSiteWidth;
+        height: $heightLikeA4;
+        background-color: $secondaryBackground;
+        font-family: $mainFont;
+        display: block;
+        color: $mainFontColor;
+
+        h2 {
+            text-transform: uppercase;
+            padding-left: $leftSitePadding;
+            margin: 0;
+        }
+
+        hr {
+            margin-left: $leftSitePadding;
+            margin-right: $leftSitePadding;
+        }
+
+        p,
+        span {
+            padding-left: $leftSitePadding;
+        }
+
+        .contactInfo {
+            padding-top: $fromNamePadding;
+            margin-bottom: 2em;
+
+            .contactBox {
+                display: flex;
+                justify-content: start;
+                align-items: center;
+                flex-wrap: wrap;
+                gap: 5px;
+                padding-left: $leftSitePadding;
+                margin-bottom: 10px;
+
+                .contactImg {
+                    height: 25px;
+                    margin-right: 10px;
+                    background-color: $nameBackground;
+                }
+
+                .contactText {
+                    color: $mainFontColor;
+                }
+            }
+
+        }
+
+        .educationInfo {
+            margin-bottom: 1em;
+
+            p {
+                margin: 0;
+
+                &:first-of-type {
+                    margin-top: 1em;
+                }
+            }
+
+
+        }
+    }
+
+    .rightSiteWrapper {
+        height: $heightLikeA4;
+        position: relative;
+
+        width: calc($widthLikeA4 - $leftSiteWidth);
+
+        .employmentHistory {
+            padding-top: $fromNamePadding;
+            background-color: $mainBackground;
+            font-family: $mainFont;
+            display: block;
+            color: $secondaryFontColor;
+
+            h2 {
+                margin: 0;
+                padding-left: $leftSitePadding;
+                padding-right: $rightSitePadding;
+            }
+
+            hr {
+                color: $nameBackground;
+                margin-left: $leftSitePadding;
+                margin-right: $rightSitePadding;
+            }
+
+            .worksSlicer {
+                color: $nameBackground;
+                margin-left: $rightSitePadding;
+            }
+
+            .workingTime {
+                margin: 0;
+                color: $workingTimeFontColor;
+                font-weight: bold;
+                padding-left: $rightSitePadding;
+                padding-right: $rightSitePadding;
+            }
+
+            .workingPlace {
+                margin: 0;
+                padding-left: $rightSitePadding;
+                padding-right: $rightSitePadding;
+            }
+
+            .workingDuties {
+                font-size: 0.8em;
+                padding-left: $rightSitePadding;
+                padding-right: $rightSitePadding;
+            }
+
+            .vl {
+                border-left: 2px solid $secondaryFontColor;
+                height: 158mm;
+                position: absolute;
+                top: 87mm;
+                right: 127mm;
+            }
+
+            .dot {
+                height: 15px;
+                width: 15px;
+                background-color: $secondaryFontColor;
+                border-radius: 50%;
+                position: absolute;
+                right: 94.6%;
+                bottom: 17%;
+            }
+
+            #dot1 {
+                top: 28.8%;
+            }
+
+            #dot2 {
+                bottom: 44.1%;
+            }
+        }
+
+        .rodo {
+            font-family: $rodoFont;
+            text-align: center;
+            font-size: 0.7em;
+            width: calc($widthLikeA4 - $leftSiteWidth);
+            position: absolute;
+            bottom: 0;
+
+            hr {
+                margin-left: $rightSitePadding;
+                margin-right: $rightSitePadding;
+                color: $nameBackground;
+            }
+
+            .rodoTextWprapper {
+                display: flex;
+                justify-content: center;
+
+                p {
+                    margin-left: $leftSitePadding;
+                    margin-right: $leftSitePadding;
+                }
+            }
+        }
+
+
+    }
+
+    .downloadButton {
+        position: absolute;
+        top: 15mm;
+        left: 45mm;
+        background-color: red;
+        font-family: $mainFont;
+        font-size: 1.5em;
+        z-index: 999;
+        cursor: pointer;
+
+        &:hover {
+            background-color: green;
+        }
+
+    }
+
+    .myPhoto {
+        position: absolute;
+        width: 30mm;
+        top: 13mm;
+        left: 13.5mm;
+    }
+}
+
+
+
+@media print {
+    body {
+        width: 210mm;
+        height: 297mm;
+        margin: 0;
+        padding: 0;
+
+        .downloadButton {
+            display: none;
+        }
+
+        .myPhoto {}
+    }
+}
